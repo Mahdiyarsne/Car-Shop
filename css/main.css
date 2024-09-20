@@ -429,7 +429,6 @@ body {
 .footer-icon{
   font-size: 1.5rem;
   text-decoration: none;
-  color: var(--mainYellow);
   transition: all .5s ease-in-out;
 }
 
