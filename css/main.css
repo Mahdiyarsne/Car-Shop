@@ -9,6 +9,10 @@
   --mainYellow: #e3b505;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--mainBlack);
@@ -350,7 +354,7 @@ body {
   min-height: 85vh;
   min-width: 95vw;
   margin: 0 auto;
-  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
 }
 
 .video-container {
@@ -391,47 +395,92 @@ body {
   padding-left: 2.2rem;
 }
 
-.service-icon{
+.service-icon {
   font-size: 4rem;
   color: var(--mainYellow);
 }
 
 /* customer */
 
-.customer-card-card{
+.customer-card-card {
   margin-top: -4rem;
   color: var(--mainGrey);
 }
 
-.customer-img{
+.customer-img {
   border: 0.4rem solid var(--mainWhite);
 }
 
-.customer-name{
+.customer-name {
   color: var(--mainBlue);
   margin: 0.5rem;
 }
 
-.customer-icon{
+.customer-icon {
   font-size: 2rem;
   color: var(--mainGrey);
 }
 
-.customer-quote{
+.customer-quote {
   width: 90%;
 }
 
 /* footer */
-.footer{
+.footer {
   background: var(--mainBlack);
 }
 
-.footer-icon{
+.footer-icon {
   font-size: 1.5rem;
   text-decoration: none;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.footer-icon:hover{
-color: var(--mainBlue);
+.footer-icon:hover {
+  color: var(--mainBlue);
+}
+
+/* scroll */
+
+.to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  background: var(--mainBlue);
+  width: 40px;
+  height: 40px;
+  color: #000;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+
+.to-top.scroll-top {
+  opacity: 1;
+  bottom: 40px;
+}
+
+.to-top svg {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  .to-top {
+    position: fixed;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .to-top svg {
+    font-size: 13px;
+  }
 }
